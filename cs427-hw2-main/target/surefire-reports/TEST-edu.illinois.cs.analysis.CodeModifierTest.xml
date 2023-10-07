@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="edu.illinois.cs.analysis.CodeModifierTest" time="0.199" tests="2" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/workspaces/cs427_mp2_shea/cs427-hw2-main/target/test-classes:/workspaces/cs427_mp2_shea/cs427-hw2-main/target/classes:/home/codespace/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/codespace/.m2/repository/com/github/javaparser/javaparser-symbol-solver-core/3.24.10/javaparser-symbol-solver-core-3.24.10.jar:/home/codespace/.m2/repository/com/github/javaparser/javaparser-core/3.24.10/javaparser-core-3.24.10.jar:/home/codespace/.m2/repository/org/javassist/javassist/3.29.2-GA/javassist-3.29.2-GA.jar:/home/codespace/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/codespace/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/codespace/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/codespace/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/codespace/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/home/codespace/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/home/codespace/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/opt/java/11.0.14/lib"/>
+    <property name="sun.java.command" value="/workspaces/cs427_mp2_shea/cs427-hw2-main/target/surefire/surefirebooter-20231006191424960_3.jar /workspaces/cs427_mp2_shea/cs427-hw2-main/target/surefire 2023-10-06T19-14-24_801-jvmRun1 surefire-20231006191424960_1tmp surefire_0-20231006191424960_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/workspaces/cs427_mp2_shea/cs427-hw2-main/target/test-classes:/workspaces/cs427_mp2_shea/cs427-hw2-main/target/classes:/home/codespace/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/codespace/.m2/repository/com/github/javaparser/javaparser-symbol-solver-core/3.24.10/javaparser-symbol-solver-core-3.24.10.jar:/home/codespace/.m2/repository/com/github/javaparser/javaparser-core/3.24.10/javaparser-core-3.24.10.jar:/home/codespace/.m2/repository/org/javassist/javassist/3.29.2-GA/javassist-3.29.2-GA.jar:/home/codespace/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/home/codespace/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/codespace/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/codespace/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/codespace/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/home/codespace/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/home/codespace/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/codespace"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-02-08"/>
+    <property name="java.home" value="/opt/java/11.0.14"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/workspaces/cs427_mp2_shea/cs427-hw2-main"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/workspaces/cs427_mp2_shea/cs427-hw2-main/target/surefire/surefirebooter-20231006191424960_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.14.1+1-LTS"/>
+    <property name="user.name" value="codespace"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.2.0-1012-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-31205"/>
+    <property name="localRepository" value="/home/codespace/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.14.1"/>
+    <property name="user.dir" value="/workspaces/cs427_mp2_shea/cs427-hw2-main"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="11.0.14.1+1-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="testJsoup" classname="edu.illinois.cs.analysis.CodeModifierTest" time="0.18">
+    <failure message="expected:&lt;package org.jsoup.nodes;&#10;&#10;import org.jsoup.internal.StringUtil;&#10;import org.jsoup.helper.Validate;&#10;import org.jsoup.parser.ParseSettings;&#10;import org.jsoup.parser.Parser;&#10;import org.jsoup.parser.Tag;&#10;import org.jsoup.select.Elements;&#10;import java.nio.charset.Charset;&#10;import java.nio.charset.CharsetEncoder;&#10;import java.util.ArrayList;&#10;import java.util.List;&#10;&#10;public class Document extends Element {&#10;&#10;    private OutputSettings outputSettings = new OutputSettings();&#10;&#10;    private Parser parser;&#10;&#10;    private QuirksMode quirksMode = QuirksMode.noQuirks;&#10;&#10;    private String location;&#10;&#10;    private boolean updateMetaCharset = false;&#10;&#10;    public Document(String baseUri) {&#10;        super(Tag.valueOf(&quot;#root&quot;, ParseSettings.htmlDefault), baseUri);&#10;        this.location = baseUri;&#10;    }&#10;&#10;    public static Document createShell(String baseUri) {&#10;        Validate.notNull(baseUri);&#10;        Document doc = new Document(baseUri);&#10;        doc.parser = doc.parser();&#10;        Element html = doc.appendElement(&quot;html&quot;);&#10;        html.appendElement(&quot;head&quot;);&#10;        html.appendElement(&quot;body&quot;);&#10;        return doc;&#10;    }&#10;&#10;    public String location() {&#10;        return location;&#10;    }&#10;&#10;    public Element head() {&#10;        return findFirstElementByTagName(&quot;head&quot;, this);&#10;    }&#10;&#10;    public Element body() {&#10;        return findFirstElementByTagName(&quot;body&quot;, this);&#10;    }&#10;&#10;    public String title() {&#10;        Element titleEl = getElementsByTag(&quot;title&quot;).first();&#10;        return null != titleEl ? StringUtil.normaliseWhitespace(titleEl.text()).trim() : &quot;&quot;;&#10;    }&#10;&#10;    public void title(String title) {&#10;        Validate.notNull(title);&#10;        Element titleEl = getElementsByTag(&quot;title&quot;).first();&#10;        if (null == titleEl) {&#10;            head().appendElement(&quot;title&quot;).text(title);&#10;        } else {&#10;            titleEl.text(title);&#10;        }&#10;    }&#10;&#10;    public Element createElement(String tagName) {&#10;        return new Element(Tag.valueOf(tagName, ParseSettings.preserveCase), this.baseUri());&#10;    }&#10;&#10;    public Document normalise() {&#10;        Element htmlEl = findFirstElementByTagName(&quot;html&quot;, this);&#10;        if (null == htmlEl)&#10;            htmlEl = appendElement(&quot;html&quot;);&#10;        if (null == head())&#10;            htmlEl.prependElement(&quot;head&quot;);&#10;        if (null == body())&#10;            htmlEl.appendElement(&quot;body&quot;);&#10;        normaliseTextNodes(head());&#10;        normaliseTextNodes(htmlEl);&#10;        normaliseTextNodes(this);&#10;        normaliseStructure(&quot;head&quot;, htmlEl);&#10;        normaliseStructure(&quot;body&quot;, htmlEl);&#10;        ensureMetaCharsetElement();&#10;        return this;&#10;    }&#10;&#10;    private void normaliseTextNodes(Element element) {&#10;        List&lt;Node&gt; toMove = new ArrayList&lt;&gt;();&#10;        for (Node node : element.childNodes) {&#10;            if (node instanceof TextNode) {&#10;                TextNode tn = (TextNode) node;&#10;                if (!tn.isBlank())&#10;                    toMove.add(tn);&#10;            }&#10;        }&#10;        for (int i = toMove.size() - 1; i &gt;= 0; i--) {&#10;            Node node = toMove.get(i);&#10;            element.removeChild(node);&#10;            body().prependChild(new TextNode(&quot; &quot;));&#10;            body().prependChild(node);&#10;        }&#10;    }&#10;&#10;    private void normaliseStructure(String tag, Element htmlEl) {&#10;        Elements elements = this.getElementsByTag(tag);&#10;        Element master = elements.first();&#10;        if (elements.size() &gt; 1) {&#10;            List&lt;Node&gt; toMove = new ArrayList&lt;&gt;();&#10;            for (int i = 1; i &lt; elements.size(); i++) {&#10;                Node dupe = elements.get(i);&#10;                toMove.addAll(dupe.ensureChildNodes());&#10;                dupe.remove();&#10;            }&#10;            for (Node dupe : toMove) master.appendChild(dupe);&#10;        }&#10;        if (!master.parent().equals(htmlEl)) {&#10;            htmlEl.appendChild(master);&#10;        }&#10;    }&#10;&#10;    private Element findFirstElementByTagName(String tag, Node node) {&#10;        if (node.nodeName().equals(tag))&#10;            return (Element) node;&#10;        else {&#10;            int size = node.childNodeSize();&#10;            for (int i = 0; i &lt; size; i++) {&#10;                Element found = findFirstElementByTagName(tag, node.childNode(i));&#10;                if (null != found)&#10;                    return found;&#10;            }&#10;        }&#10;        return null;&#10;    }&#10;&#10;    @Override&#10;    public String outerHtml() {&#10;        return super.html();&#10;    }&#10;&#10;    @Override&#10;    public Element text(String text) {&#10;        body().text(text);&#10;        return this;&#10;    }&#10;&#10;    @Override&#10;    public String nodeName() {&#10;        return &quot;#document&quot;;&#10;    }&#10;&#10;    public void charset(Charset charset) {&#10;        updateMetaCharsetElement(true);&#10;        outputSettings.charset(charset);&#10;        ensureMetaCharsetElement();&#10;    }&#10;&#10;    public Charset charset() {&#10;        return outputSettings.charset();&#10;    }&#10;&#10;    public void updateMetaCharsetElement(boolean update) {&#10;        this.updateMetaCharset = update;&#10;    }&#10;&#10;    public boolean updateMetaCharsetElement() {&#10;        return updateMetaCharset;&#10;    }&#10;&#10;    @Override&#10;    public Document clone() {&#10;        Document clone = (Document) super.clone();&#10;        clone.outputSettings = this.outputSettings.clone();&#10;        return clone;&#10;    }&#10;&#10;    private void ensureMetaCharsetElement() {&#10;        if (updateMetaCharset) {&#10;            OutputSettings.Syntax syntax = outputSettings().syntax();&#10;            if (syntax == OutputSettings.Syntax.html) {&#10;                Element metaCharset = select(&quot;meta[charset]&quot;).first();&#10;                if (null != metaCharset) {&#10;                    metaCharset.attr(&quot;charset&quot;, charset().displayName());&#10;                } else {&#10;                    Element head = head();&#10;                    if (null != head) {&#10;                        head.appendElement(&quot;meta&quot;).attr(&quot;charset&quot;, charset().displayName());&#10;                    }&#10;                }&#10;                select(&quot;meta[name=charset]&quot;).remove();&#10;            } else if (syntax == OutputSettings.Syntax.xml) {&#10;                Node node = childNodes().get(0);&#10;                if (node instanceof XmlDeclaration) {&#10;                    XmlDeclaration decl = (XmlDeclaration) node;&#10;                    if (decl.name().equals(&quot;xml&quot;)) {&#10;                        decl.attr(&quot;encoding&quot;, charset().displayName());&#10;                        final String version = decl.attr(&quot;version&quot;);&#10;                        if (null != version) {&#10;                            decl.attr(&quot;version&quot;, &quot;1.0&quot;);&#10;                        }&#10;                    } else {&#10;                        decl = new XmlDeclaration(&quot;xml&quot;, false);&#10;                        decl.attr(&quot;version&quot;, &quot;1.0&quot;);&#10;                        decl.attr(&quot;encoding&quot;, charset().displayName());&#10;                        prependChild(decl);&#10;                    }&#10;                } else {&#10;                    XmlDeclaration decl = new XmlDeclaration(&quot;xml&quot;, false);&#10;                    decl.attr(&quot;version&quot;, &quot;1.0&quot;);&#10;                    decl.attr(&quot;encoding&quot;, charset().displayName());&#10;                    prependChild(decl);&#10;                }&#10;            }&#10;        }&#10;    }&#10;&#10;    public static class OutputSettings implements Cloneable {&#10;&#10;        public enum Syntax {&#10;&#10;            html, xml&#10;        }&#10;&#10;        private Entities.EscapeMode escapeMode = Entities.EscapeMode.base;&#10;&#10;        private Charset charset;&#10;&#10;        private ThreadLocal&lt;CharsetEncoder&gt; encoderThreadLocal = new ThreadLocal&lt;&gt;();&#10;&#10;        Entities.CoreCharset coreCharset;&#10;&#10;        private boolean prettyPrint = true;&#10;&#10;        private boolean outline = false;&#10;&#10;        private int indentAmount = 1;&#10;&#10;        private Syntax syntax = Syntax.html;&#10;&#10;        public OutputSettings() {&#10;            charset(Charset.forName(&quot;UTF8&quot;));&#10;        }&#10;&#10;        public Entities.EscapeMode escapeMode() {&#10;            return escapeMode;&#10;        }&#10;&#10;        public OutputSettings escapeMode(Entities.EscapeMode escapeMode) {&#10;            this.escapeMode = escapeMode;&#10;            return this;&#10;        }&#10;&#10;        public Charset charset() {&#10;            return charset;&#10;        }&#10;&#10;        public OutputSettings charset(Charset charset) {&#10;            this.charset = charset;&#10;            return this;&#10;        }&#10;&#10;        public OutputSettings charset(String charset) {&#10;            charset(Charset.forName(charset));&#10;            return this;&#10;        }&#10;&#10;        CharsetEncoder prepareEncoder() {&#10;            CharsetEncoder encoder = charset.newEncoder();&#10;            encoderThreadLocal.set(encoder);&#10;            coreCharset = Entities.CoreCharset.byName(encoder.charset().name());&#10;            return encoder;&#10;        }&#10;&#10;        CharsetEncoder encoder() {&#10;            CharsetEncoder encoder = encoderThreadLocal.get();&#10;            return null != encoder ? encoder : prepareEncoder();&#10;        }&#10;&#10;        public Syntax syntax() {&#10;            return syntax;&#10;        }&#10;&#10;        public OutputSettings syntax(Syntax syntax) {&#10;            this.syntax = syntax;&#10;            return this;&#10;        }&#10;&#10;        public boolean prettyPrint() {&#10;            return prettyPrint;&#10;        }&#10;&#10;        public OutputSettings prettyPrint(boolean pretty) {&#10;            prettyPrint = pretty;&#10;            return this;&#10;        }&#10;&#10;        public boolean outline() {&#10;            return outline;&#10;        }&#10;&#10;        public OutputSettings outline(boolean outlineMode) {&#10;            outline = outlineMode;&#10;            return this;&#10;        }&#10;&#10;        public int indentAmount() {&#10;            return indentAmount;&#10;        }&#10;&#10;        public OutputSettings indentAmount(int indentAmount) {&#10;            Validate.isTrue(indentAmount &gt;= 0);&#10;            this.indentAmount = indentAmount;&#10;            return this;&#10;        }&#10;&#10;        @Override&#10;        public OutputSettings clone() {&#10;            OutputSettings clone;&#10;            try {&#10;                clone = (OutputSettings) super.clone();&#10;            } catch (CloneNotSupportedException e) {&#10;                throw new RuntimeException(e);&#10;            }&#10;            clone.charset(charset.name());&#10;            clone.escapeMode = Entities.EscapeMode.valueOf(escapeMode.name());&#10;            return clone;&#10;        }&#10;    }&#10;&#10;    public OutputSettings outputSettings() {&#10;        return outputSettings;&#10;    }&#10;&#10;    public Document outputSettings(OutputSettings outputSettings) {&#10;        Validate.notNull(outputSettings);&#10;        this.outputSettings = outputSettings;&#10;        return this;&#10;    }&#10;&#10;    public enum QuirksMode {&#10;&#10;        noQuirks, quirks, limitedQuirks&#10;    }&#10;&#10;    public QuirksMode quirksMode() {&#10;        return quirksMode;&#10;    }&#10;&#10;    public Document quirksMode(QuirksMode quirksMode) {&#10;        this.quirksMode = quirksMode;&#10;        return this;&#10;    }&#10;&#10;    public Parser parser() {&#10;        return parser;&#10;    }&#10;&#10;    public Document parser(Parser parser) {&#10;        this.parser = parser;&#10;        return this;&#10;    }&#10;}&#10;&gt; but was:&lt;package org.jsoup.nodes;&#10;&#10;import org.jsoup.internal.StringUtil;&#10;import org.jsoup.helper.Validate;&#10;import org.jsoup.parser.ParseSettings;&#10;import org.jsoup.parser.Parser;&#10;import org.jsoup.parser.Tag;&#10;import org.jsoup.select.Elements;&#10;import java.nio.charset.Charset;&#10;import java.nio.charset.CharsetEncoder;&#10;import java.util.ArrayList;&#10;import java.util.List;&#10;&#10;public class Document extends Element {&#10;&#10;    private OutputSettings outputSettings = new OutputSettings();&#10;&#10;    private Parser parser;&#10;&#10;    private QuirksMode quirksMode = QuirksMode.noQuirks;&#10;&#10;    private String location;&#10;&#10;    private boolean updateMetaCharset = false;&#10;&#10;    public Document(String baseUri) {&#10;        super(Tag.valueOf(&quot;#root&quot;, ParseSettings.htmlDefault), baseUri);&#10;        this.location = baseUri;&#10;    }&#10;&#10;    public static Document createShell(String baseUri) {&#10;        Validate.notNull(baseUri);&#10;        Document doc = new Document(baseUri);&#10;        doc.parser = doc.parser();&#10;        Element html = doc.appendElement(&quot;html&quot;);&#10;        html.appendElement(&quot;head&quot;);&#10;        html.appendElement(&quot;body&quot;);&#10;        return doc;&#10;    }&#10;&#10;    public String location() {&#10;        return location;&#10;    }&#10;&#10;    public Element head() {&#10;        return findFirstElementByTagName(&quot;head&quot;, this);&#10;    }&#10;&#10;    public Element body() {&#10;        return findFirstElementByTagName(&quot;body&quot;, this);&#10;    }&#10;&#10;    public String title() {&#10;        Element titleEl = getElementsByTag(&quot;title&quot;).first();&#10;        return titleEl != null ? StringUtil.normaliseWhitespace(titleEl.text()).trim() : &quot;&quot;;&#10;    }&#10;&#10;    public void title(String title) {&#10;        Validate.notNull(title);&#10;        Element titleEl = getElementsByTag(&quot;title&quot;).first();&#10;        if (titleEl == null) {&#10;            head().appendElement(&quot;title&quot;).text(title);&#10;        } else {&#10;            titleEl.text(title);&#10;        }&#10;    }&#10;&#10;    public Element createElement(String tagName) {&#10;        return new Element(Tag.valueOf(tagName, ParseSettings.preserveCase), this.baseUri());&#10;    }&#10;&#10;    public Document normalise() {&#10;        Element htmlEl = findFirstElementByTagName(&quot;html&quot;, this);&#10;        if (htmlEl == null)&#10;            htmlEl = appendElement(&quot;html&quot;);&#10;        if (head() == null)&#10;            htmlEl.prependElement(&quot;head&quot;);&#10;        if (body() == null)&#10;            htmlEl.appendElement(&quot;body&quot;);&#10;        normaliseTextNodes(head());&#10;        normaliseTextNodes(htmlEl);&#10;        normaliseTextNodes(this);&#10;        normaliseStructure(&quot;head&quot;, htmlEl);&#10;        normaliseStructure(&quot;body&quot;, htmlEl);&#10;        ensureMetaCharsetElement();&#10;        return this;&#10;    }&#10;&#10;    private void normaliseTextNodes(Element element) {&#10;        List&lt;Node&gt; toMove = new ArrayList&lt;&gt;();&#10;        for (Node node : element.childNodes) {&#10;            if (node instanceof TextNode) {&#10;                TextNode tn = (TextNode) node;&#10;                if (!tn.isBlank())&#10;                    toMove.add(tn);&#10;            }&#10;        }&#10;        for (int i = toMove.size() - 1; i &gt;= 0; i--) {&#10;            Node node = toMove.get(i);&#10;            element.removeChild(node);&#10;            body().prependChild(new TextNode(&quot; &quot;));&#10;            body().prependChild(node);&#10;        }&#10;    }&#10;&#10;    private void normaliseStructure(String tag, Element htmlEl) {&#10;        Elements elements = this.getElementsByTag(tag);&#10;        Element master = elements.first();&#10;        if (elements.size() &gt; 1) {&#10;            List&lt;Node&gt; toMove = new ArrayList&lt;&gt;();&#10;            for (int i = 1; i &lt; elements.size(); i++) {&#10;                Node dupe = elements.get(i);&#10;                toMove.addAll(dupe.ensureChildNodes());&#10;                dupe.remove();&#10;            }&#10;            for (Node dupe : toMove) master.appendChild(dupe);&#10;        }&#10;        if (!master.parent().equals(htmlEl)) {&#10;            htmlEl.appendChild(master);&#10;        }&#10;    }&#10;&#10;    private Element findFirstElementByTagName(String tag, Node node) {&#10;        if (node.nodeName().equals(tag))&#10;            return (Element) node;&#10;        else {&#10;            int size = node.childNodeSize();&#10;            for (int i = 0; i &lt; size; i++) {&#10;                Element found = findFirstElementByTagName(tag, node.childNode(i));&#10;                if (found != null)&#10;                    return found;&#10;            }&#10;        }&#10;        return null;&#10;    }&#10;&#10;    @Override&#10;    public String outerHtml() {&#10;        return super.html();&#10;    }&#10;&#10;    @Override&#10;    public Element text(String text) {&#10;        body().text(text);&#10;        return this;&#10;    }&#10;&#10;    @Override&#10;    public String nodeName() {&#10;        return &quot;#document&quot;;&#10;    }&#10;&#10;    public void charset(Charset charset) {&#10;        updateMetaCharsetElement(true);&#10;        outputSettings.charset(charset);&#10;        ensureMetaCharsetElement();&#10;    }&#10;&#10;    public Charset charset() {&#10;        return outputSettings.charset();&#10;    }&#10;&#10;    public void updateMetaCharsetElement(boolean update) {&#10;        this.updateMetaCharset = update;&#10;    }&#10;&#10;    public boolean updateMetaCharsetElement() {&#10;        return updateMetaCharset;&#10;    }&#10;&#10;    @Override&#10;    public Document clone() {&#10;        Document clone = (Document) super.clone();&#10;        clone.outputSettings = this.outputSettings.clone();&#10;        return clone;&#10;    }&#10;&#10;    private void ensureMetaCharsetElement() {&#10;        if (updateMetaCharset) {&#10;            OutputSettings.Syntax syntax = outputSettings().syntax();&#10;            if (syntax == OutputSettings.Syntax.html) {&#10;                Element metaCharset = select(&quot;meta[charset]&quot;).first();&#10;                if (metaCharset != null) {&#10;                    metaCharset.attr(&quot;charset&quot;, charset().displayName());&#10;                } else {&#10;                    Element head = head();&#10;                    if (head != null) {&#10;                        head.appendElement(&quot;meta&quot;).attr(&quot;charset&quot;, charset().displayName());&#10;                    }&#10;                }&#10;                select(&quot;meta[name=charset]&quot;).remove();&#10;            } else if (syntax == OutputSettings.Syntax.xml) {&#10;                Node node = childNodes().get(0);&#10;                if (node instanceof XmlDeclaration) {&#10;                    XmlDeclaration decl = (XmlDeclaration) node;&#10;                    if (decl.name().equals(&quot;xml&quot;)) {&#10;                        decl.attr(&quot;encoding&quot;, charset().displayName());&#10;                        final String version = decl.attr(&quot;version&quot;);&#10;                        if (version != null) {&#10;                            decl.attr(&quot;version&quot;, &quot;1.0&quot;);&#10;                        }&#10;                    } else {&#10;                        decl = new XmlDeclaration(&quot;xml&quot;, false);&#10;                        decl.attr(&quot;version&quot;, &quot;1.0&quot;);&#10;                        decl.attr(&quot;encoding&quot;, charset().displayName());&#10;                        prependChild(decl);&#10;                    }&#10;                } else {&#10;                    XmlDeclaration decl = new XmlDeclaration(&quot;xml&quot;, false);&#10;                    decl.attr(&quot;version&quot;, &quot;1.0&quot;);&#10;                    decl.attr(&quot;encoding&quot;, charset().displayName());&#10;                    prependChild(decl);&#10;                }&#10;            }&#10;        }&#10;    }&#10;&#10;    public static class OutputSettings implements Cloneable {&#10;&#10;        public enum Syntax {&#10;&#10;            html, xml&#10;        }&#10;&#10;        private Entities.EscapeMode escapeMode = Entities.EscapeMode.base;&#10;&#10;        private Charset charset;&#10;&#10;        private ThreadLocal&lt;CharsetEncoder&gt; encoderThreadLocal = new ThreadLocal&lt;&gt;();&#10;&#10;        Entities.CoreCharset coreCharset;&#10;&#10;        private boolean prettyPrint = true;&#10;&#10;        private boolean outline = false;&#10;&#10;        private int indentAmount = 1;&#10;&#10;        private Syntax syntax = Syntax.html;&#10;&#10;        public OutputSettings() {&#10;            charset(Charset.forName(&quot;UTF8&quot;));&#10;        }&#10;&#10;        public Entities.EscapeMode escapeMode() {&#10;            return escapeMode;&#10;        }&#10;&#10;        public OutputSettings escapeMode(Entities.EscapeMode escapeMode) {&#10;            this.escapeMode = escapeMode;&#10;            return this;&#10;        }&#10;&#10;        public Charset charset() {&#10;            return charset;&#10;        }&#10;&#10;        public OutputSettings charset(Charset charset) {&#10;            this.charset = charset;&#10;            return this;&#10;        }&#10;&#10;        public OutputSettings charset(String charset) {&#10;            charset(Charset.forName(charset));&#10;            return this;&#10;        }&#10;&#10;        CharsetEncoder prepareEncoder() {&#10;            CharsetEncoder encoder = charset.newEncoder();&#10;            encoderThreadLocal.set(encoder);&#10;            coreCharset = Entities.CoreCharset.byName(encoder.charset().name());&#10;            return encoder;&#10;        }&#10;&#10;        CharsetEncoder encoder() {&#10;            CharsetEncoder encoder = encoderThreadLocal.get();&#10;            return encoder != null ? encoder : prepareEncoder();&#10;        }&#10;&#10;        public Syntax syntax() {&#10;            return syntax;&#10;        }&#10;&#10;        public OutputSettings syntax(Syntax syntax) {&#10;            this.syntax = syntax;&#10;            return this;&#10;        }&#10;&#10;        public boolean prettyPrint() {&#10;            return prettyPrint;&#10;        }&#10;&#10;        public OutputSettings prettyPrint(boolean pretty) {&#10;            prettyPrint = pretty;&#10;            return this;&#10;        }&#10;&#10;        public boolean outline() {&#10;            return outline;&#10;        }&#10;&#10;        public OutputSettings outline(boolean outlineMode) {&#10;            outline = outlineMode;&#10;            return this;&#10;        }&#10;&#10;        public int indentAmount() {&#10;            return indentAmount;&#10;        }&#10;&#10;        public OutputSettings indentAmount(int indentAmount) {&#10;            Validate.isTrue(indentAmount &gt;= 0);&#10;            this.indentAmount = indentAmount;&#10;            return this;&#10;        }&#10;&#10;        @Override&#10;        public OutputSettings clone() {&#10;            OutputSettings clone;&#10;            try {&#10;                clone = (OutputSettings) super.clone();&#10;            } catch (CloneNotSupportedException e) {&#10;                throw new RuntimeException(e);&#10;            }&#10;            clone.charset(charset.name());&#10;            clone.escapeMode = Entities.EscapeMode.valueOf(escapeMode.name());&#10;            return clone;&#10;        }&#10;    }&#10;&#10;    public OutputSettings outputSettings() {&#10;        return outputSettings;&#10;    }&#10;&#10;    public Document outputSettings(OutputSettings outputSettings) {&#10;        Validate.notNull(outputSettings);&#10;        this.outputSettings = outputSettings;&#10;        return this;&#10;    }&#10;&#10;    public enum QuirksMode {&#10;&#10;        noQuirks, quirks, limitedQuirks&#10;    }&#10;&#10;    public QuirksMode quirksMode() {&#10;        return quirksMode;&#10;    }&#10;&#10;    public Document quirksMode(QuirksMode quirksMode) {&#10;        this.quirksMode = quirksMode;&#10;        return this;&#10;    }&#10;&#10;    public Parser parser() {&#10;        return parser;&#10;    }&#10;&#10;    public Document parser(Parser parser) {&#10;        this.parser = parser;&#10;        return this;&#10;    }&#10;}&#10;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+expected:<package org.jsoup.nodes;
+
+import org.jsoup.internal.StringUtil;
+import org.jsoup.helper.Validate;
+import org.jsoup.parser.ParseSettings;
+import org.jsoup.parser.Parser;
+import org.jsoup.parser.Tag;
+import org.jsoup.select.Elements;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Document extends Element {
+
+    private OutputSettings outputSettings = new OutputSettings();
+
+    private Parser parser;
+
+    private QuirksMode quirksMode = QuirksMode.noQuirks;
+
+    private String location;
+
+    private boolean updateMetaCharset = false;
+
+    public Document(String baseUri) {
+        super(Tag.valueOf("#root", ParseSettings.htmlDefault), baseUri);
+        this.location = baseUri;
+    }
+
+    public static Document createShell(String baseUri) {
+        Validate.notNull(baseUri);
+        Document doc = new Document(baseUri);
+        doc.parser = doc.parser();
+        Element html = doc.appendElement("html");
+        html.appendElement("head");
+        html.appendElement("body");
+        return doc;
+    }
+
+    public String location() {
+        return location;
+    }
+
+    public Element head() {
+        return findFirstElementByTagName("head", this);
+    }
+
+    public Element body() {
+        return findFirstElementByTagName("body", this);
+    }
+
+    public String title() {
+        Element titleEl = getElementsByTag("title").first();
+        return null != titleEl ? StringUtil.normaliseWhitespace(titleEl.text()).trim() : "";
+    }
+
+    public void title(String title) {
+        Validate.notNull(title);
+        Element titleEl = getElementsByTag("title").first();
+        if (null == titleEl) {
+            head().appendElement("title").text(title);
+        } else {
+            titleEl.text(title);
+        }
+    }
+
+    public Element createElement(String tagName) {
+        return new Element(Tag.valueOf(tagName, ParseSettings.preserveCase), this.baseUri());
+    }
+
+    public Document normalise() {
+        Element htmlEl = findFirstElementByTagName("html", this);
+        if (null == htmlEl)
+            htmlEl = appendElement("html");
+        if (null == head())
+            htmlEl.prependElement("head");
+        if (null == body())
+            htmlEl.appendElement("body");
+        normaliseTextNodes(head());
+        normaliseTextNodes(htmlEl);
+        normaliseTextNodes(this);
+        normaliseStructure("head", htmlEl);
+        normaliseStructure("body", htmlEl);
+        ensureMetaCharsetElement();
+        return this;
+    }
+
+    private void normaliseTextNodes(Element element) {
+        List<Node> toMove = new ArrayList<>();
+        for (Node node : element.childNodes) {
+            if (node instanceof TextNode) {
+                TextNode tn = (TextNode) node;
+                if (!tn.isBlank())
+                    toMove.add(tn);
+            }
+        }
+        for (int i = toMove.size() - 1; i >= 0; i--) {
+            Node node = toMove.get(i);
+            element.removeChild(node);
+            body().prependChild(new TextNode(" "));
+            body().prependChild(node);
+        }
+    }
+
+    private void normaliseStructure(String tag, Element htmlEl) {
+        Elements elements = this.getElementsByTag(tag);
+        Element master = elements.first();
+        if (elements.size() > 1) {
+            List<Node> toMove = new ArrayList<>();
+            for (int i = 1; i < elements.size(); i++) {
+                Node dupe = elements.get(i);
+                toMove.addAll(dupe.ensureChildNodes());
+                dupe.remove();
+            }
+            for (Node dupe : toMove) master.appendChild(dupe);
+        }
+        if (!master.parent().equals(htmlEl)) {
+            htmlEl.appendChild(master);
+        }
+    }
+
+    private Element findFirstElementByTagName(String tag, Node node) {
+        if (node.nodeName().equals(tag))
+            return (Element) node;
+        else {
+            int size = node.childNodeSize();
+            for (int i = 0; i < size; i++) {
+                Element found = findFirstElementByTagName(tag, node.childNode(i));
+                if (null != found)
+                    return found;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public String outerHtml() {
+        return super.html();
+    }
+
+    @Override
+    public Element text(String text) {
+        body().text(text);
+        return this;
+    }
+
+    @Override
+    public String nodeName() {
+        return "#document";
+    }
+
+    public void charset(Charset charset) {
+        updateMetaCharsetElement(true);
+        outputSettings.charset(charset);
+        ensureMetaCharsetElement();
+    }
+
+    public Charset charset() {
+        return outputSettings.charset();
+    }
+
+    public void updateMetaCharsetElement(boolean update) {
+        this.updateMetaCharset = update;
+    }
+
+    public boolean updateMetaCharsetElement() {
+        return updateMetaCharset;
+    }
+
+    @Override
+    public Document clone() {
+        Document clone = (Document) super.clone();
+        clone.outputSettings = this.outputSettings.clone();
+        return clone;
+    }
+
+    private void ensureMetaCharsetElement() {
+        if (updateMetaCharset) {
+            OutputSettings.Syntax syntax = outputSettings().syntax();
+            if (syntax == OutputSettings.Syntax.html) {
+                Element metaCharset = select("meta[charset]").first();
+                if (null != metaCharset) {
+                    metaCharset.attr("charset", charset().displayName());
+                } else {
+                    Element head = head();
+                    if (null != head) {
+                        head.appendElement("meta").attr("charset", charset().displayName());
+                    }
+                }
+                select("meta[name=charset]").remove();
+            } else if (syntax == OutputSettings.Syntax.xml) {
+                Node node = childNodes().get(0);
+                if (node instanceof XmlDeclaration) {
+                    XmlDeclaration decl = (XmlDeclaration) node;
+                    if (decl.name().equals("xml")) {
+                        decl.attr("encoding", charset().displayName());
+                        final String version = decl.attr("version");
+                        if (null != version) {
+                            decl.attr("version", "1.0");
+                        }
+                    } else {
+                        decl = new XmlDeclaration("xml", false);
+                        decl.attr("version", "1.0");
+                        decl.attr("encoding", charset().displayName());
+                        prependChild(decl);
+                    }
+                } else {
+                    XmlDeclaration decl = new XmlDeclaration("xml", false);
+                    decl.attr("version", "1.0");
+                    decl.attr("encoding", charset().displayName());
+                    prependChild(decl);
+                }
+            }
+        }
+    }
+
+    public static class OutputSettings implements Cloneable {
+
+        public enum Syntax {
+
+            html, xml
+        }
+
+        private Entities.EscapeMode escapeMode = Entities.EscapeMode.base;
+
+        private Charset charset;
+
+        private ThreadLocal<CharsetEncoder> encoderThreadLocal = new ThreadLocal<>();
+
+        Entities.CoreCharset coreCharset;
+
+        private boolean prettyPrint = true;
+
+        private boolean outline = false;
+
+        private int indentAmount = 1;
+
+        private Syntax syntax = Syntax.html;
+
+        public OutputSettings() {
+            charset(Charset.forName("UTF8"));
+        }
+
+        public Entities.EscapeMode escapeMode() {
+            return escapeMode;
+        }
+
+        public OutputSettings escapeMode(Entities.EscapeMode escapeMode) {
+            this.escapeMode = escapeMode;
+            return this;
+        }
+
+        public Charset charset() {
+            return charset;
+        }
+
+        public OutputSettings charset(Charset charset) {
+            this.charset = charset;
+            return this;
+        }
+
+        public OutputSettings charset(String charset) {
+            charset(Charset.forName(charset));
+            return this;
+        }
+
+        CharsetEncoder prepareEncoder() {
+            CharsetEncoder encoder = charset.newEncoder();
+            encoderThreadLocal.set(encoder);
+            coreCharset = Entities.CoreCharset.byName(encoder.charset().name());
+            return encoder;
+        }
+
+        CharsetEncoder encoder() {
+            CharsetEncoder encoder = encoderThreadLocal.get();
+            return null != encoder ? encoder : prepareEncoder();
+        }
+
+        public Syntax syntax() {
+            return syntax;
+        }
+
+        public OutputSettings syntax(Syntax syntax) {
+            this.syntax = syntax;
+            return this;
+        }
+
+        public boolean prettyPrint() {
+            return prettyPrint;
+        }
+
+        public OutputSettings prettyPrint(boolean pretty) {
+            prettyPrint = pretty;
+            return this;
+        }
+
+        public boolean outline() {
+            return outline;
+        }
+
+        public OutputSettings outline(boolean outlineMode) {
+            outline = outlineMode;
+            return this;
+        }
+
+        public int indentAmount() {
+            return indentAmount;
+        }
+
+        public OutputSettings indentAmount(int indentAmount) {
+            Validate.isTrue(indentAmount >= 0);
+            this.indentAmount = indentAmount;
+            return this;
+        }
+
+        @Override
+        public OutputSettings clone() {
+            OutputSettings clone;
+            try {
+                clone = (OutputSettings) super.clone();
+            } catch (CloneNotSupportedException e) {
+                throw new RuntimeException(e);
+            }
+            clone.charset(charset.name());
+            clone.escapeMode = Entities.EscapeMode.valueOf(escapeMode.name());
+            return clone;
+        }
+    }
+
+    public OutputSettings outputSettings() {
+        return outputSettings;
+    }
+
+    public Document outputSettings(OutputSettings outputSettings) {
+        Validate.notNull(outputSettings);
+        this.outputSettings = outputSettings;
+        return this;
+    }
+
+    public enum QuirksMode {
+
+        noQuirks, quirks, limitedQuirks
+    }
+
+    public QuirksMode quirksMode() {
+        return quirksMode;
+    }
+
+    public Document quirksMode(QuirksMode quirksMode) {
+        this.quirksMode = quirksMode;
+        return this;
+    }
+
+    public Parser parser() {
+        return parser;
+    }
+
+    public Document parser(Parser parser) {
+        this.parser = parser;
+        return this;
+    }
+}
+> but was:<package org.jsoup.nodes;
+
+import org.jsoup.internal.StringUtil;
+import org.jsoup.helper.Validate;
+import org.jsoup.parser.ParseSettings;
+import org.jsoup.parser.Parser;
+import org.jsoup.parser.Tag;
+import org.jsoup.select.Elements;
+import java.nio.charset.Charset;
+import java.nio.charset.CharsetEncoder;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Document extends Element {
+
+    private OutputSettings outputSettings = new OutputSettings();
+
+    private Parser parser;
+
+    private QuirksMode quirksMode = QuirksMode.noQuirks;
+
+    private String location;
+
+    private boolean updateMetaCharset = false;
+
+    public Document(String baseUri) {
+        super(Tag.valueOf("#root", ParseSettings.htmlDefault), baseUri);
+        this.location = baseUri;
+    }
+
+    public static Document createShell(String baseUri) {
+        Validate.notNull(baseUri);
+        Document doc = new Document(baseUri);
+        doc.parser = doc.parser();
+        Element html = doc.appendElement("html");
+        html.appendElement("head");
+        html.appendElement("body");
+        return doc;
+    }
+
+    public String location() {
+        return location;
+    }
+
+    public Element head() {
+        return findFirstElementByTagName("head", this);
+    }
+
+    public Element body() {
+        return findFirstElementByTagName("body", this);
+    }
+
+    public String title() {
+        Element titleEl = getElementsByTag("title").first();
+        return titleEl != null ? StringUtil.normaliseWhitespace(titleEl.text()).trim() : "";
+    }
+
+    public void title(String title) {
+        Validate.notNull(title);
+        Element titleEl = getElementsByTag("title").first();
+        if (titleEl == null) {
+            head().appendElement("title").text(title);
+        } else {
+            titleEl.text(title);
+        }
+    }
+
+    public Element createElement(String tagName) {
+        return new Element(Tag.valueOf(tagName, ParseSettings.preserveCase), this.baseUri());
+    }
+
+    public Document normalise() {
+        Element htmlEl = findFirstElementByTagName("html", this);
+        if (htmlEl == null)
+            htmlEl = appendElement("html");
+        if (head() == null)
+            htmlEl.prependElement("head");
+        if (body() == null)
+            htmlEl.appendElement("body");
+        normaliseTextNodes(head());
+        normaliseTextNodes(htmlEl);
+        normaliseTextNodes(this);
+        normaliseStructure("head", htmlEl);
+        normaliseStructure("body", htmlEl);
+        ensureMetaCharsetElement();
+        return this;
+    }
+
+    private void normaliseTextNodes(Element element) {
+        List<Node> toMove = new ArrayList<>();
+        for (Node node : element.childNodes) {
+            if (node instanceof TextNode) {
+                TextNode tn = (TextNode) node;
+                if (!tn.isBlank())
+                    toMove.add(tn);
+            }
+        }
+        for (int i = toMove.size() - 1; i >= 0; i--) {
+            Node node = toMove.get(i);
+            element.removeChild(node);
+            body().prependChild(new TextNode(" "));
+            body().prependChild(node);
+        }
+    }
+
+    private void normaliseStructure(String tag, Element htmlEl) {
+        Elements elements = this.getElementsByTag(tag);
+        Element master = elements.first();
+        if (elements.size() > 1) {
+            List<Node> toMove = new ArrayList<>();
+            for (int i = 1; i < elements.size(); i++) {
+                Node dupe = elements.get(i);
+                toMove.addAll(dupe.ensureChildNodes());
+                dupe.remove();
+            }
+            for (Node dupe : toMove) master.appendChild(dupe);
+        }
+        if (!master.parent().equals(htmlEl)) {
+            htmlEl.appendChild(master);
+        }
+    }
+
+    private Element findFirstElementByTagName(String tag, Node node) {
+        if (node.nodeName().equals(tag))
+            return (Element) node;
+        else {
+            int size = node.childNodeSize();
+            for (int i = 0; i < size; i++) {
+                Element found = findFirstElementByTagName(tag, node.childNode(i));
+                if (found != null)
+                    return found;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public String outerHtml() {
+        return super.html();
+    }
+
+    @Override
+    public Element text(String text) {
+        body().text(text);
+        return this;
+    }
+
+    @Override
+    public String nodeName() {
+        return "#document";
+    }
+
+    public void charset(Charset charset) {
+        updateMetaCharsetElement(true);
+        outputSettings.charset(charset);
+        ensureMetaCharsetElement();
+    }
+
+    public Charset charset() {
+        return outputSettings.charset();
+    }
+
+    public void updateMetaCharsetElement(boolean update) {
+        this.updateMetaCharset = update;
+    }
+
+    public boolean updateMetaCharsetElement() {
+        return updateMetaCharset;
+    }
+
+    @Override
+    public Document clone() {
+        Document clone = (Document) super.clone();
+        clone.outputSettings = this.outputSettings.clone();
+        return clone;
+    }
+
+    private void ensureMetaCharsetElement() {
+        if (updateMetaCharset) {
+            OutputSettings.Syntax syntax = outputSettings().syntax();
+            if (syntax == OutputSettings.Syntax.html) {
+                Element metaCharset = select("meta[charset]").first();
+                if (metaCharset != null) {
+                    metaCharset.attr("charset", charset().displayName());
+                } else {
+                    Element head = head();
+                    if (head != null) {
+                        head.appendElement("meta").attr("charset", charset().displayName());
+                    }
+                }
+                select("meta[name=charset]").remove();
+            } else if (syntax == OutputSettings.Syntax.xml) {
+                Node node = childNodes().get(0);
+                if (node instanceof XmlDeclaration) {
+                    XmlDeclaration decl = (XmlDeclaration) node;
+                    if (decl.name().equals("xml")) {
+                        decl.attr("encoding", charset().displayName());
+                        final String version = decl.attr("version");
+                        if (version != null) {
+                            decl.attr("version", "1.0");
+                        }
+                    } else {
+                        decl = new XmlDeclaration("xml", false);
+                        decl.attr("version", "1.0");
+                        decl.attr("encoding", charset().displayName());
+                        prependChild(decl);
+                    }
+                } else {
+                    XmlDeclaration decl = new XmlDeclaration("xml", false);
+                    decl.attr("version", "1.0");
+                    decl.attr("encoding", charset().displayName());
+                    prependChild(decl);
+                }
+            }
+        }
+    }
+
+    public static class OutputSettings implements Cloneable {
+
+        public enum Syntax {
+
+            html, xml
+        }
+
+        private Entities.EscapeMode escapeMode = Entities.EscapeMode.base;
+
+        private Charset charset;
+
+        private ThreadLocal<CharsetEncoder> encoderThreadLocal = new ThreadLocal<>();
+
+        Entities.CoreCharset coreCharset;
+
+        private boolean prettyPrint = true;
+
+        private boolean outline = false;
+
+        private int indentAmount = 1;
+
+        private Syntax syntax = Syntax.html;
+
+        public OutputSettings() {
+            charset(Charset.forName("UTF8"));
+        }
+
+        public Entities.EscapeMode escapeMode() {
+            return escapeMode;
+        }
+
+        public OutputSettings escapeMode(Entities.EscapeMode escapeMode) {
+            this.escapeMode = escapeMode;
+            return this;
+        }
+
+        public Charset charset() {
+            return charset;
+        }
+
+        public OutputSettings charset(Charset charset) {
+            this.charset = charset;
+            return this;
+        }
+
+        public OutputSettings charset(String charset) {
+            charset(Charset.forName(charset));
+            return this;
+        }
+
+        CharsetEncoder prepareEncoder() {
+            CharsetEncoder encoder = charset.newEncoder();
+            encoderThreadLocal.set(encoder);
+            coreCharset = Entities.CoreCharset.byName(encoder.charset().name());
+            return encoder;
+        }
+
+        CharsetEncoder encoder() {
+            CharsetEncoder encoder = encoderThreadLocal.get();
+            return encoder != null ? encoder : prepareEncoder();
+        }
+
+        public Syntax syntax() {
+            return syntax;
+        }
+
+        public OutputSettings syntax(Syntax syntax) {
+            this.syntax = syntax;
+            return this;
+        }
+
+        public boolean prettyPrint() {
+            return prettyPrint;
+        }
+
+        public OutputSettings prettyPrint(boolean pretty) {
+            prettyPrint = pretty;
+            return this;
+        }
+
+        public boolean outline() {
+            return outline;
+        }
+
+        public OutputSettings outline(boolean outlineMode) {
+            outline = outlineMode;
+            return this;
+        }
+
+        public int indentAmount() {
+            return indentAmount;
+        }
+
+        public OutputSettings indentAmount(int indentAmount) {
+            Validate.isTrue(indentAmount >= 0);
+            this.indentAmount = indentAmount;
+            return this;
+        }
+
+        @Override
+        public OutputSettings clone() {
+            OutputSettings clone;
+            try {
+                clone = (OutputSettings) super.clone();
+            } catch (CloneNotSupportedException e) {
+                throw new RuntimeException(e);
+            }
+            clone.charset(charset.name());
+            clone.escapeMode = Entities.EscapeMode.valueOf(escapeMode.name());
+            return clone;
+        }
+    }
+
+    public OutputSettings outputSettings() {
+        return outputSettings;
+    }
+
+    public Document outputSettings(OutputSettings outputSettings) {
+        Validate.notNull(outputSettings);
+        this.outputSettings = outputSettings;
+        return this;
+    }
+
+    public enum QuirksMode {
+
+        noQuirks, quirks, limitedQuirks
+    }
+
+    public QuirksMode quirksMode() {
+        return quirksMode;
+    }
+
+    public Document quirksMode(QuirksMode quirksMode) {
+        this.quirksMode = quirksMode;
+        return this;
+    }
+
+    public Parser parser() {
+        return parser;
+    }
+
+    public Document parser(Parser parser) {
+        this.parser = parser;
+        return this;
+    }
+}
+>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.illinois.cs.analysis.CodeModifierTest.testJsoup(CodeModifierTest.java:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="testToyProgram" classname="edu.illinois.cs.analysis.CodeModifierTest" time="0.006">
+    <failure message="expected:&lt;class X {&#10;&#10;    public Object m(Object x, Object y) {&#10;        if (null != x)&#10;            return x;&#10;        if (y == null)&#10;            return &quot;error&quot;;&#10;        return y;&#10;    }&#10;}&#10;&gt; but was:&lt;class X {&#10;&#10;    public Object m(Object x, Object y) {&#10;        if (x != null)&#10;            return x;&#10;        if (null == y)&#10;            return &quot;error&quot;;&#10;        return y;&#10;    }&#10;}&#10;&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+expected:<class X {
+
+    public Object m(Object x, Object y) {
+        if (null != x)
+            return x;
+        if (y == null)
+            return "error";
+        return y;
+    }
+}
+> but was:<class X {
+
+    public Object m(Object x, Object y) {
+        if (x != null)
+            return x;
+        if (null == y)
+            return "error";
+        return y;
+    }
+}
+>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at edu.illinois.cs.analysis.CodeModifierTest.testToyProgram(CodeModifierTest.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+</testsuite>
