@@ -37,8 +37,8 @@ public class CodeParser extends VoidVisitorAdapter
 		 boolean hasReturnType = !n.getType().toString().equals("void");
  
 		 if (hasBody && hasParameter && isPublic && isNotStatic && hasReturnType) {
-			System.out.println(methNum);
-			 methNum++;
+
+			methNum++;
 		 }
 	}
 
