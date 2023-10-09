@@ -63,6 +63,25 @@ public class CodeGenerator extends VoidVisitorAdapter
 			// str = super.toString();" for your reference, and you can complete
 			// the implementation to include the remaining statements here
 
+			// START Brendan's Code
+			// Adding: int len = str.length();
+			VariableDeclarator varDec2 = new VariableDeclarator();
+			varDec2.setType("int");
+			varDec2.setName("len");
+			varDec2.setInitializer(new MethodCallExpr(new NameExpr("str"), "length"));
+			VariableDeclarationExpr varExpr2 = new VariableDeclarationExpr(varDec2);
+			ExpressionStmt varDef2 = new ExpressionStmt(varExpr2);
+			body.addStatement(varDef2);
+	
+			// Adding: if (len > 40) return "OMITTED"; else return str;
+			IfStmt ifStmt = new IfStmt();
+			ifStmt.setCondition(new BinaryExpr(new NameExpr("len"), new IntegerLiteralExpr(40), BinaryExpr.Operator.GREATER));
+			ifStmt.setThenStmt(new ReturnStmt(new StringLiteralExpr("OMITTED")));
+			ifStmt.setElseStmt(new ReturnStmt(new NameExpr("str")));
+			body.addStatement(ifStmt);
+
+			// END Brendan's Code
+
 			n.addMethod("toString", Modifier.Keyword.PUBLIC).setType("String")
 					.addAnnotation(ann).setBody(body);
 		}
